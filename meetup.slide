@@ -1,0 +1,85 @@
+Kubernetes + Self-Driving + Operators + Terraform = Tectonic
+
+June 19th 2016
+
+Sergiusz Urbaniak
+Software Engineer, CoreOS
+sur@coreos.com
+@_surbaniak
+
+* Overview
+
+_What_are_we_trying_to_solve_here?_
+
+Install a *self-driving*
+
+*Kubernetes*
+
+including *operators*
+
+using *Terraform*.
+
+* Installation - Terraform
+
+1. Assets
+
+- TLS Certificates
+- k8s `*.yaml` deployment assets
+
+2. Infrastructure
+
+- Network
+- Security Groups
+- DNS
+- Instances
+
+3. Self-driving kick-off
+
+* Instance Types
+
+*etcd* (optional)
+
+- k8s control plane data
+
+*Master*
+
+- Kubernetes control plane pods
+
+*Worker*
+
+- Tectonic ingress resources
+- _Your_ workload
+
+* Networking
+
+- flannel & VXLAN
+
+- Well defined security settings (gorups)
+
+- Specification
+
+.link https://github.com/coreos/tectonic-installer/blob/master/Documentation/generic-platform.md
+
+* Crazy idea time:
+
+Use *Kubernetes* to install and maintain *Kubernetes*
+
+.image self-driving.gif _ 400
+
+* Self-driving
+
+- bootkube
+- semantics
+
+* Operators
+
+- overview
+
+* Terraform
+
+- modules
+- platforms
+
+* Demo time
+
+.link https://asciinema.org/a/BuEZejfKiMvGQAHgqbRWZSDcu
